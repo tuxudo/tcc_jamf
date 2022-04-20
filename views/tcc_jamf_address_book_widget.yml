@@ -1,0 +1,9 @@
+type: scrollbox
+widget_id: tcc_jamf-address-book-widget
+api_url: /module/tcc_jamf/get_scroll_widget/kTCCServiceAddressBook
+i18n_title: tcc_jamf.AddressBook
+icon: fa-address-book
+listing_link: /show/listing/tcc_jamf/tcc
+search_key: client
+i18n_empty_result: tcc_jamf.nodata
+badge: count

@@ -1,0 +1,9 @@
+type: scrollbox
+widget_id: tcc_jamf-documents-widget
+api_url: /module/tcc_jamf/get_scroll_widget/kTCCServiceSystemPolicyDocumentsFolder
+i18n_title: tcc_jamf.DocumentsFolder
+icon: fa-file-text-o
+listing_link: /show/listing/tcc_jamf/tcc
+search_key: client
+i18n_empty_result: tcc_jamf.nodata
+badge: count

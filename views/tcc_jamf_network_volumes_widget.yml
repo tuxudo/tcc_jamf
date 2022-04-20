@@ -1,0 +1,9 @@
+type: scrollbox
+widget_id: tcc_jamf-network-volumes-widget
+api_url: /module/tcc_jamf/get_scroll_widget/kTCCServiceSystemPolicyNetworkVolumes
+i18n_title: tcc_jamf.NetworkVolumes
+icon: fa-folder-open-o
+listing_link: /show/listing/tcc_jamf/tcc
+search_key: client
+i18n_empty_result: tcc_jamf.nodata
+badge: count

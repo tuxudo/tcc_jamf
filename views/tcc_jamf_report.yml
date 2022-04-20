@@ -1,0 +1,19 @@
+row1:
+  tcc_jamf_full_disk_access:
+  tcc_jamf_microphone_access:
+  tcc_jamf_camera_access:
+row2:
+  tcc_jamf_accessibility:
+  tcc_jamf_address_book:
+  tcc_jamf_location:
+row3:
+  tcc_jamf_documents:
+  tcc_jamf_desktop:
+  tcc_jamf_downloads:
+row4:
+  tcc_jamf_removable_volumes:
+  tcc_jamf_post_event:
+  tcc_jamf_apple_event:
+row5:
+  tcc_jamf_network_volumes:
+  tcc_jamf_screen_capture:

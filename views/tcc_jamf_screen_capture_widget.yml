@@ -1,0 +1,9 @@
+type: scrollbox
+widget_id: tcc_jamf-screen-capture-widget
+api_url: /module/tcc_jamf/get_scroll_widget/kTCCServiceScreenCapture
+i18n_title: tcc_jamf.ScreenCapture
+icon: fa-window-restore
+listing_link: /show/listing/tcc_jamf/tcc
+search_key: client
+i18n_empty_result: tcc_jamf.nodata
+badge: count

@@ -1,0 +1,17 @@
+i18n_title: tcc_jamf.report
+not_null_column: dbpath
+js_link: module/tcc_jamf/js/tcc
+table:
+  - column: machine.computer_name
+    i18n_header: listing.computername
+    formatter: clientDetail
+    tab_link: tcc_jamf-tab
+  - column: reportdata.serial_number
+    i18n_header: serial
+  - {i18n_header: tcc_jamf.client, column: tcc.client}
+  - {i18n_header: tcc_jamf.service, column: tcc.service, formatter: formatTCC_service}
+  - {i18n_header: tcc_jamf.allowed, column: tcc.allowed, formatter: formatTCCYesNo}
+  - {i18n_header: tcc_jamf.last_modified, column: tcc.last_modified, formatter: timestampToMoment}
+  - {i18n_header: tcc_jamf.prompt_count, column: tcc.prompt_count}
+  - {i18n_header: tcc_jamf.indirect_object_identifier, column: tcc.indirect_object_identifier}
+  - {i18n_header: tcc_jamf.dbpath, column: tcc.dbpath}

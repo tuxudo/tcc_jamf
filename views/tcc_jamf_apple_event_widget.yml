@@ -1,0 +1,9 @@
+type: scrollbox
+widget_id: tcc_jamf-apple-event-widget
+api_url: /module/tcc_jamf/get_scroll_widget/kTCCServiceAppleEvents
+i18n_title: tcc_jamf.AppleEvents
+icon: fa-cogs
+listing_link: /show/listing/tcc_jamf/tcc
+search_key: client
+i18n_empty_result: tcc_jamf.nodata
+badge: count

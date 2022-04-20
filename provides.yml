@@ -1,0 +1,41 @@
+client_tabs:
+    tcc-tab:
+        view: tcc_jamf_tab
+        i18n: tcc_jamf.tcc
+listings:
+    tcc:
+        view: tcc_jamf_listing
+        i18n: tcc_jamf.tcc
+reports:
+    tcc_report:
+        view: tcc_jamf_report
+        i18n: tcc_jamf.report
+widgets:
+    tcc_jamf_full_disk_access:
+        view: tcc_jamf_full_disk_access_widget
+    tcc_jamf_microphone_access:
+        view: tcc_jamf_microphone_access_widget
+    tcc_jamf_camera_access:
+        view: tcc_jamf_camera_access_widget
+    tcc_jamf_accessibility:
+        view: tcc_jamf_accessibility_widget
+    tcc_jamf_address_book:
+        view: tcc_jamf_address_book_widget
+    tcc_jamf_location:
+        view: tcc_jamf_location_widget
+    tcc_jamf_documents:
+        view: tcc_jamf_documents_widget
+    tcc_jamf_desktop:
+        view: tcc_jamf_desktop_widget
+    tcc_jamf_downloads:
+        view: tcc_jamf_downloads_widget
+    tcc_jamf_removable_volumes:
+        view: tcc_jamf_removable_volumes_widget
+    tcc_jamf_post_event:
+        view: tcc_jamf_post_event_widget
+    tcc_jamf_apple_event:
+        view: tcc_jamf_apple_event_widget
+    tcc_jamf_network_volumes:
+        view: tcc_jamf_network_volumes_widget
+    tcc_jamf_screen_capture:
+        view: tcc_jamf_screen_capture_widget
