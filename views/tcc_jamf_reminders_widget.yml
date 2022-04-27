@@ -1,0 +1,9 @@
+type: scrollbox
+widget_id: tcc_jamf-reminders-widget
+api_url: /module/tcc_jamf/get_scroll_widget/kTCCServiceReminders
+i18n_title: tcc_jamf.Reminders
+icon: fa-list-alt
+listing_link: /show/listing/tcc_jamf/tcc
+search_key: client
+i18n_empty_result: tcc_jamf.nodata
+badge: count

@@ -1,19 +1,30 @@
 row1:
-  tcc_jamf_full_disk_access:
   tcc_jamf_microphone_access:
   tcc_jamf_camera_access:
+  tcc_jamf_screen_capture:
 row2:
-  tcc_jamf_accessibility:
-  tcc_jamf_address_book:
-  tcc_jamf_location:
-row3:
-  tcc_jamf_documents:
   tcc_jamf_desktop:
+  tcc_jamf_documents:
   tcc_jamf_downloads:
+row3:
+  tcc_jamf_location:
+  tcc_jamf_full_disk_access:
+  tcc_jamf_file_provider:
 row4:
   tcc_jamf_removable_volumes:
+  tcc_jamf_network_volumes:
+  tcc_jamf_bluetooth:
+row5:
+  tcc_jamf_listen_event:
   tcc_jamf_post_event:
   tcc_jamf_apple_event:
-row5:
-  tcc_jamf_network_volumes:
-  tcc_jamf_screen_capture:
+row6:
+  tcc_jamf_address_book:
+  tcc_jamf_calendar:
+  tcc_jamf_reminders:
+row7:
+  tcc_jamf_photos:
+  tcc_jamf_focus_status:
+  tcc_jamf_accessibility:
+row8:
+  tcc_jamf_developer_tool:

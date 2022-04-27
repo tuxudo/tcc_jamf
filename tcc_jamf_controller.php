@@ -42,7 +42,7 @@ class Tcc_jamf_controller extends Module_controller
                 ORDER BY count DESC";
 
         $out = [];
-        $queryobj = new Tcc_model;
+        $queryobj = new Tcc_jamf_model;
         foreach ($queryobj->query($sql) as $obj) {
             if ("$obj->count" !== "0") {
                 $obj->service = $obj->service ? $obj->service : 'Unknown';
@@ -68,7 +68,7 @@ class Tcc_jamf_controller extends Module_controller
                         WHERE serial_number = '$serial_number'";
         
         $obj = new View();
-        $queryobj = new Tcc_model();
+        $queryobj = new Tcc_jamf_model();
         $tcc_tab = $queryobj->query($sql);
         $obj->view('json', array('msg' => current(array('msg' => $tcc_tab)))); 
     }

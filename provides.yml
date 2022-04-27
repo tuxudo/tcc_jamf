@@ -39,3 +39,19 @@ widgets:
         view: tcc_jamf_network_volumes_widget
     tcc_jamf_screen_capture:
         view: tcc_jamf_screen_capture_widget
+    tcc_jamf_bluetooth:
+        view: tcc_jamf_bluetooth_widget
+    tcc_jamf_calendar:
+        view: tcc_jamf_calendar_widget
+    tcc_jamf_developer_tool:
+        view: tcc_jamf_developer_tool_widget
+    tcc_jamf_file_provider:
+        view: tcc_jamf_file_provider_widget
+    tcc_jamf_focus_status:
+        view: tcc_jamf_focus_status_widget
+    tcc_jamf_listen_event:
+        view: tcc_jamf_listen_event_widget
+    tcc_jamf_photos:
+        view: tcc_jamf_photos_widget
+    tcc_jamf_reminders:
+        view: tcc_jamf_reminders_widget
