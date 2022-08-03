@@ -145,11 +145,14 @@ class ReadTCC():
         else:
             self.sqlite.connect(self.tcc_db)
 
-            # Process other columns for newer OS versions Big Sur (Darwin 20)
-            if getDarwinVersion() >= 20:
+            # Get list of database columns
+            columns = [i[1] for i in self.sqlite.query('PRAGMA table_info(access)', fetch=True)]
+
+            # Process other columns for newer OS versions Big Sur
+            if 'service' in columns and 'client' in columns and 'client_type' in columns and 'auth_value' in columns and 'auth_reason' in columns and 'indirect_object_identifier' in columns and 'last_modified' in columns:
                 query = self.sqlite.query('SELECT service, client, client_type, auth_value, auth_reason, indirect_object_identifier, last_modified FROM access', fetch=True)
-            # Process other columns for Mojave and Catalina (Darwin 18 - 19)
-            elif getDarwinVersion() >= 18:
+            # Process other columns for Mojave and Catalina
+            elif 'service' in columns and 'client' in columns and 'client_type' in columns and 'allowed' in columns and 'prompt_count' in columns and 'indirect_object_identifier' in columns and 'last_modified' in columns:
                 query = self.sqlite.query('SELECT service, client, client_type, allowed, prompt_count, indirect_object_identifier, last_modified FROM access', fetch=True)
             else:
                 query = self.sqlite.query('SELECT service, client, client_type, allowed, prompt_count FROM access', fetch=True)
