@@ -1,4 +1,4 @@
-#!/usr/local/munkireport/munkireport-python2
+#!/usr/local/munkireport/munkireport-python3
 # Written for MunkiReport by tuxudo
 # Part of this scrpt are from https://github.com/carlashley/tccprofile
 
@@ -25,7 +25,7 @@ def get_dbs():
                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     (output, unused_error) = proc.communicate()
     
-    for user in output.split('\n'):
+    for user in output.decode().split('\n'):
         if 'NFSHomeDirectory' in user and '/var/empty' not in user:
             userpath = user.replace("NFSHomeDirectory: ", "")+'/Library/Application Support/com.apple.TCC/TCC.db'
             if os.path.isfile(userpath):
@@ -140,7 +140,7 @@ class ReadTCC():
 
     def read_db(self):
         if self.tcc_db.startswith('/Library') and os.getuid() != 0:
-            print('You must be root to read {}'.format(self.tcc_db))
+            print(('<result>You must be root to read {} </result>'.format(self.tcc_db)))
             sys.exit(1)
         else:
             self.sqlite.connect(self.tcc_db)
@@ -168,11 +168,6 @@ def main():
         print ('<result>TCC module requires 10.9 or higher</result>')
         exit(0)
 
-    # Set the encoding
-    # The "ugly hack" :P 
-    reload(sys)  
-    sys.setdefaultencoding('utf8')
-
     # Get information about the TCC database
     dbs = get_dbs()
     result = process_dbs(dbs)
@@ -181,8 +176,11 @@ def main():
     cachedir = '/usr/local/munkireport/scripts/cache'
     output_plist = os.path.join(cachedir, 'tcc_jamf.plist')
     plistlib.writePlist(result, output_plist)
-    print ('<result>TCC module cache file successfully generated</result>')
-    #print plistlib.writePlistToString(result)
+    try:
+        plistlib.writePlist(result, output_plist)
+    except:
+        with open(output_plist, 'wb') as fp:
+            plistlib.dump(result, fp, fmt=plistlib.FMT_XML)
 
 if __name__ == "__main__":
     main()
