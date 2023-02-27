@@ -1,6 +1,6 @@
 #!/usr/local/munkireport/munkireport-python3
 # Written for MunkiReport by tuxudo
-# Part of this scrpt are from https://github.com/carlashley/tccprofile
+# Parts of this script are from https://github.com/carlashley/tccprofile
 
 import os
 import subprocess
@@ -19,7 +19,7 @@ def get_dbs():
         user_paths = ""
     
     # Get all users' home folders
-    cmd = ['dscl', '.', '-readall', '/Users', 'NFSHomeDirectory']
+    cmd = ['/usr/bin/dscl', '.', '-readall', '/Users', 'NFSHomeDirectory']
     proc = subprocess.Popen(cmd, shell=False, bufsize=-1,
                             stdin=subprocess.PIPE,
                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -101,8 +101,8 @@ class Sqlite_db():
             try:
                 self.connection = sqlite3.connect(db)
                 self.c = self.connection.cursor()
-            except Exception:
-                raise
+            except:
+                print("Error: Unable to access TCC database! Does the MunkiReport have permission?")
                 sys.exit(1)
 
     def disconnect(self, db):
