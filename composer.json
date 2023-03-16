@@ -1,1 +1,5 @@
-{"require":{"php":"^7.0"},"license":"MIT","name":"tuxudo/tcc_jamf","description":"tcc_jamf module for munkireport, powered by Jamf EA."}
+{
+  "license":"MIT",
+  "name":"tuxudo/tcc_jamf",
+  "description":"tcc_jamf module for munkireport, powered by Jamf EA."
+}
