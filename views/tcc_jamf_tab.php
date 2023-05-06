@@ -27,7 +27,7 @@ $(document).on('appReady', function(){
                     // Skip skipThese
                     if(skipThese.indexOf(prop) == -1){
                         // Do nothing for empty values to blank them
-                        if (d[prop] == '' || d[prop] == null){
+                        if ((d[prop] == '' || d[prop] == null) && d[prop] !== 0 ) {
                             rows = rows
 
                         // Format boolean
