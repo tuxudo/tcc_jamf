@@ -186,7 +186,11 @@ def main():
     # Write TCC info results to cache
     cachedir = '/usr/local/munkireport/scripts/cache'
     output_plist = os.path.join(cachedir, 'tcc_jamf.plist')
-    plistlib.writePlist(result, output_plist)
+    try:
+        plistlib.writePlist(result, output_plist)
+    except:
+        with open(output_plist, 'wb') as fp:
+            plistlib.dump(result, fp, fmt=plistlib.FMT_XML)
     print ('&lt;result&gt;TCC module cache file successfully generated&lt;/result&gt;')
     #print plistlib.writePlistToString(result)
 
