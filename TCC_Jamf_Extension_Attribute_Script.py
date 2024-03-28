@@ -175,7 +175,6 @@ def main():
     # Write TCC info results to cache
     cachedir = '/usr/local/munkireport/scripts/cache'
     output_plist = os.path.join(cachedir, 'tcc_jamf.plist')
-    plistlib.writePlist(result, output_plist)
     try:
         plistlib.writePlist(result, output_plist)
     except:
