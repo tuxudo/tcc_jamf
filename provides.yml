@@ -1,5 +1,5 @@
 client_tabs:
-    tcc-tab:
+    tcc_jamf-tab:
         view: tcc_jamf_tab
         i18n: tcc_jamf.tcc
 listings:
@@ -7,7 +7,7 @@ listings:
         view: tcc_jamf_listing
         i18n: tcc_jamf.tcc
 reports:
-    tcc_report:
+    tcc_jamf_report:
         view: tcc_jamf_report
         i18n: tcc_jamf.report
 widgets:
