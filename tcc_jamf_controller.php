@@ -31,7 +31,7 @@ class Tcc_jamf_controller extends Module_controller
      **/
     public function get_scroll_widget($service)
     {
-        $service = preg_replace("/[^A-Za-z0-9_\-]]/", '', $service);
+        $service = preg_replace("/[^A-Za-z0-9_\-]/", '', $service);
         
         $sql = "SELECT COUNT(CASE WHEN `service` <> '' AND `service` IS NOT NULL THEN 1 END) AS count, service, client 
                 FROM tcc
@@ -61,7 +61,7 @@ class Tcc_jamf_controller extends Module_controller
     **/
     public function get_tab_data($serial_number = '')
     {
-        $serial_number = preg_replace("/[^A-Za-z0-9_\-]]/", '', $serial_number);
+        $serial_number = preg_replace("/[^A-Za-z0-9_\-]/", '', $serial_number);
 
         $sql = "SELECT service, client, allowed, prompt_count, indirect_object_identifier, last_modified, dbpath 
                         FROM tcc
